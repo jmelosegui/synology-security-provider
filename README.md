@@ -17,6 +17,7 @@ Use [Composer][2] to install the jmelosegui/synology-security-provider library b
         "jmelosegui/synology-security-provider": "~0.1"
     }
 }
+```
 
 Usage
 -----
@@ -29,7 +30,7 @@ $app->register(new SynologyServiceProvider(), array(
     'synologyServerPort' => '5000',
 ));
 ```
-Since the code will run inside the NAS you can use localhost as the serverName.
+Since the code will run inside the NAS you can use localhost as the `serverName`.
 If you need to debug on your dev pc change localhost to the Synology server Ip address.
 
 Next, register the `synology` security provider in your firewall.
@@ -62,7 +63,8 @@ $app->register(new SecurityServiceProvider($app), array(
 License
 -------
 
-Released under the MIT license. See the LICENSE file for details.
+Released under the MIT license. See the [LICENSE][3] file for details.
 
 [1]: http://www.synology.com/
 [2]: http://getcomposer.org
+[3]: https://github.com/jmelosegui/synology-security-provider/blob/master/LICENSE
