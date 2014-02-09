@@ -1,0 +1,19 @@
+{
+    "name": "jmelosegui/synology-security-provider",
+    "description": "Silex Synology Security Provider",
+    "keywords": ["silex", "synology", "security"],
+    "homepage": "https://github.com/jmelosegui/synology-security-provider",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Juan Manuel Elósegui",
+            "email": "elosegui@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "jmelosegui\\Synology": ["src/"]
+        }
+    }
+}
