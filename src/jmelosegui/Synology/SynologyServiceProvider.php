@@ -17,25 +17,11 @@ use jmelosegui\Synology\Security\SynologyAuthenticationListener;
 class SynologyServiceProvider implements ServiceProviderInterface {
 
     public function register(Application $app) {
-        $app->register(new SecurityServiceProvider($app), array(
-            'security.firewalls' => array(
-                'login' => array(
-                    'pattern' => '^/login$',
-                ),
-                'synology' => array(
-                    'synology' => true,
-                    'pattern' => '^.*$',
-                    'form' => array('login_path' => '/login', 'check_path' => '/dologin', 'use_referer' => true),
-                    'logout' => array('logout_path' => '/logout'),
-                    'users' => null
-                )
-            )
-        ));
 
         $app['security.authentication_listener.factory.synology'] = $app->protect(function ($name, $options) use ($app) {
 
             $app['security.authentication_provider.'.$name.'.synology'] = $app->share(function ($options) use ($app) {
-                return new SynologyAuthenticationProvider('synology');
+                return new SynologyAuthenticationProvider('synology', $options);
             });
 
             if (!isset($app['security.authentication_listener.'.$name.'.synology'])) {
