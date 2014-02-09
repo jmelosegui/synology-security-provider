@@ -1,7 +1,7 @@
 SynologyServiceProvider
 ====================
 
-This library provides the users authentication system through the [Synology NAS][1]'s security System.
+This library provides the users authentication through the [Synology][1]'s security System.
 
 Installation
 ------------
