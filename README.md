@@ -14,7 +14,7 @@ Use [Composer][2] to install the jmelosegui/synology-security-provider library b
         "silex/silex": "~1.0",
         "symfony/form": "~2.3",
         "symfony/security": "~2.3",
-        "jmelosegui/synology-security-provider": "~0.1"
+        "jmelosegui/synology-security-provider": "dev-master"
     }
 }
 ```
