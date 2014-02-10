@@ -15,5 +15,6 @@
         "psr-0": {
             "jmelosegui\\Synology": ["src/"]
         }
-    }
+    },
+    "minimum-stability": "dev-master"
 }
